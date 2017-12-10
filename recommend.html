@@ -1,0 +1,101 @@
+<!-- Recommend / Fascinate Others -->
+{% extends "layout.html" %}
+
+{% block title %}
+    Recommend
+{% endblock %}
+
+{% block main %}
+
+<p>
+
+    <br>
+    <b><i>Fascinate Others!</i></b>
+    <br>
+    Share fascinating information with us!
+
+    <br><br>
+</p>
+    <form action="/recommend" method="post">
+
+        <b><i>The Fascinating Information</i></b>
+        <!-- Title Field -->
+        <div class="form-group">
+            <label>Title: &emsp; </label>
+            <input autocomplete="off" autofocus class="form-control" name="title" placeholder="Title" type="text"/>
+        </div>
+
+        <!-- Description Fields -->
+        <div class="form-group">
+            Fascinate, Line 1: &emsp; <input class="form-control" name="description_1" placeholder="Line 1" type="text"/>
+        </div>
+        <div class="form-group">
+            Fascinate, Line 2 (opt.): &emsp; <input class="form-control" name="description_2" placeholder="Line 2" type="text"/>
+        </div>
+        <div class="form-group">
+            Fascinate, Line 3 (opt.): &emsp; <input class="form-control" name="description_3" placeholder="Line 3" type="text"/>
+        </div>
+
+        <b><i>Any Associated Graphic or Depiction?</i></b>
+        <!-- Image Fields -->
+        <div class="form-group">
+            Image Link (opt.): &emsp; <input class="form-control" name="image_link" placeholder="Image Link" type="text"/>
+            (Link to image directly)
+        </div>
+        <div class="form-group">
+            Image Source Link (opt.): &emsp; <input class="form-control" name="image_source" placeholder="Image Source" type="text"/>
+            (Link to article/webpage)
+        </div>
+        <div class="form-group">
+            Image Name (opt.): &emsp; <input class="form-control" name="image_alt" placeholder="Image Name" type="text"/>
+        </div>
+
+        <b><i>Please Include Your Info Source(s)!</i></b>
+        <!-- Source Fields -->
+        <div class="form-group">
+            Source Name 1: &emsp; <input class="form-control" name="source_1_name" placeholder="Source Name 1" type="text"/>
+            Ex. Financial Times
+        </div>
+        <div class="form-group">
+            Source Link 1: &emsp; <input class="form-control" name="source_1_link" placeholder="Source Link 1" type="text"/>
+        </div>
+        <div class="form-group">
+            Source Name 2 (opt.): &emsp; <input class="form-control" name="source_2_name" placeholder="Source Name 2" type="text"/>
+        </div>
+        <div class="form-group">
+            Source Link 2 (opt.): &emsp; <input class="form-control" name="source_2_link" placeholder="Source Link 2" type="text"/>
+        </div>
+        <div class="form-group">
+            Source Name 3 (opt.): &emsp; <input class="form-control" name="source_3_name" placeholder="Source Name 3" type="text"/>
+        </div>
+        <div class="form-group">
+            Source Link 3 (opt.): &emsp; <input class="form-control" name="source_3_link" placeholder="Source Link 3" type="text"/>
+        </div>
+
+        <!-- Additional Fields -->
+        <div class="form-group">
+            Anything Else We Should Know? (opt.) &emsp; <input class="form-control" name="anything_else" placeholder="Anything else?" type="text"/>
+        </div>
+        <!-- Instead of optional could alternatively do required: * = Required-->
+
+        <!-- Validity Check (#toomuchfakenews) -->
+        <!--<form> <input type="checkbox" name="validity_check"> I have a bike<br></form>-->
+        <div class="form-group">
+            <input type="checkbox" name="validity_check"> To prevent spreading misinformation, please check the box to confirm, to the best of your knowledge, that this is accurate information.<br>
+
+        <!-- Submit button -->
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit" style="background-color:green;">Fascinate Others</button>
+
+    </form>
+
+    <br>
+    <p>
+        <br>
+        <i>Thanks so much!</i>
+        <br><br>
+    </p>
+    <br>
+
+{% endblock %}

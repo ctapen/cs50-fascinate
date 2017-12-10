@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+     <!-- Order the page by different values, without creating separate pages -->
+    <form action="/fascinate" method="post">
+        <i>View by:</i> &emsp;
+        <button id="page_display" class="button_page_display" style="color: blue; border: none; background: none; padding: 1.5px" name="page_display" value="newest"><u>Newest</u> &emsp;</button>
+        <button id="page_display" class="button_page_display" style="color: blue; border: none; background: none; padding: 1.5px" name="page_display" value="most_popular"><u>Highest Rated</u> &emsp;</button>
+        <br>
+        <i>Or by tag:</i> &emsp;
+        <button id="page_display" class="button_page_display" style="color: blue; border: none; background: none; padding: 1.5px" name="page_display" value="#world"><u>#world</u> &emsp;</button>
+        <button id="page_display" class="button_page_display" style="color: blue; border: none; background: none; padding: 1.5px" name="page_display" value="#technology"><u>#technology</u> &emsp;</button>
+        <button id="page_display" class="button_page_display" style="color: blue; border: none; background: none; padding: 1.5px" name="page_display" value="#health"><u>#health</u> &emsp;</button>
+        <button id="page_display" class="button_page_display" style="color: blue; border: none; background: none; padding: 1.5px" name="page_display" value="#US"><u>#US</u> &emsp;</button>
+    </form>
+
+    <br><br>
+
+    <!--For inheritance from index.html-->
+    <!--Ref: http://flask.pocoo.org/docs/0.12/patterns/templateinheritance/-->
+    {% block index %}
+        {{ super() }}
+    {% endblock %}
+
+{% endblock %}

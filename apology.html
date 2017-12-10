@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+    <i>Oops!  Ran into an issue...</i>
+    <br><br>
+    <img alt="{{ top }}" class="border" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=http://motleydogs.com/wp-content/uploads/2012/11/He-doesnt-want-cookie-I-can-have-two-Funny-dog-photo-with-captions.jpg"/>
+{% endblock %}

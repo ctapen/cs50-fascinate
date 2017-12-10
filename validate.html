@@ -1,0 +1,69 @@
+<!-- Recommend / Fascinate Others -->
+{% extends "layout.html" %}
+
+{% block title %}
+    Recommend
+{% endblock %}
+
+{% block main %}
+
+<p>
+
+    <br>
+    <b><i>Help Ensure High Quality Content!</i></b>
+    <br><br>
+    Please share your thoughts on the entry you find inaccurate or otherwise questionable.
+    <br>
+    If you have the entry number of the fascinating content, entering it would be most helpful!
+
+    <br><br>
+</p>
+    <form action="/validate" method="post">
+
+        <b><i>The Entry to Validate</i></b>
+        <!-- Entry Number -->
+        <div class="form-group">
+            <label>Entry's Number: &emsp; </label>
+            <input autocomplete="off" autofocus class="form-control" name="entry_nbr" placeholder="Entry Number" type="text"/>
+        </div>
+        <!-- Title Field -->
+        <div class="form-group">
+            <label>Entry's Title: &emsp; </label>
+            <input class="form-control" name="title" placeholder="Title" type="text"/>
+        </div>
+
+        <!-- Reason Questionable -->
+        <div class="form-group">
+            Reason Questionable: &emsp; <input class="form-control" name="reason_questionable" placeholder="Reason Questionable" type="text" style="width:400px;"/>
+        </div>
+
+        <b><i>Please Include Any Sources that Back Up Your Submission</i></b>
+        <!-- Source Fields -->
+        <div class="form-group">
+            Source Link 1: &emsp; <input class="form-control" name="source_counter_1" placeholder="Source Counter 1" type="text"/>
+        </div>
+        <div class="form-group">
+            Source Link 2: &emsp; <input class="form-control" name="source_counter_2" placeholder="Source Counter 2" type="text"/>
+        </div>
+
+        <!-- Additional Fields -->
+        <div class="form-group">
+            Anything Else We Should Know?&emsp; <input class="form-control" name="anything_else" placeholder="Anything else?" type="text"/>
+        </div>
+
+        <!-- Submit button -->
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit" style="background-color:green;">Submit</button>
+
+    </form>
+
+    <br>
+    <p>
+        <br>
+        <i>Thanks so much!</i>
+        <br><br>
+    </p>
+    <br>
+
+{% endblock %}
